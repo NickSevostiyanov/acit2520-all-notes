@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+</head>
+<body>
+    <h1>Create post</h1>
+    <form action="/create" method="post">
+        <input type="text" name="title" placeholder="title">
+        <button>create</button>
+    </form>
+    <h1>Posts</h1>
+    <main>
+        <% posts.forEach (post => { %>
+        <p><%= post.title %></p>
+        <% }) %>
+    </main>
+    <script>
+        // debugger;
+        // scan page for the first form on the page
+            // return the form
+                            // VVVvvvvvvvvv
+        const form = document.querySelector("form");
+            // Listen to event of user clicking submit button
+        form.addEventListener("submit", (event) => {
+            event.preventDefault(); // Stop the form submission
+            // fetch()                   prevent default 
+            // TO-DO:   Add Optimistic UI
+            const p = document.createElement("p");
+            const title = document.querySelector("input");
+            const main = document.querySelector("main");
+            p.innerText = title.value;
+            main.append(p);
+        });
+
+    </script>
+</body>
+</html>

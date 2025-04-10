@@ -1,0 +1,93 @@
+Acit2520
+1/9/25
+week1
+
+-----------------------------------------------------
+node-js setup, 
+runtime environments, 
+java script review
+quiz 1
+after midterm:
+	group project
+-----------------------------------------------------
+REPL = Read Execute Print Loop
+
+Pure function = Output is same after tons of input (running code)
+Unpure function = Code is dependent (can change)
+
+JIT compilation (just in time compilation)
+	Save compiled code (machine code) into .pyc
+		(.pyc = python compiled)
+	Function called again skips interpreter
+		uses .pyc saved output
+-----------------------------------------------------
+Javascript, python = high level langauge
+
+Installing “python” just installs environment
+
+Runtime has:
+	Translator
+		(compiler or interpreter)
+Environment has:
+	API’s 
+
+Java runtime environment (JRE)
+	Includes Java Virtual Machine (JVM) (a translator)
+		Interpreter
+		Compiler (Java C)
+	JVM gives access to Java library
+		Microphone library API
+	
+Android uses Java code + JVM translator
+	API’s are different
+	(Android Runtime Environment)
+	
+	Orientation API = Android Runtime Environment:
+		Boolean if horizontal or not
+	
+Every programming language needs a Runtime Environment in order to execute (work)
+	Runtime (compiler or interpreter) != environment
+
+
+-------------------------------------------------------
+Javascripts runtime environment is Web Browser
+Installation is not required
+
+Chrome translator = V8 Engine (Interpreter)
+Firefox = Spidermonkey (interpreter)
+
+(Web API’s) ---> (Javascript code) ---> google chrome translator
+
+Web API’s NOT in Javascript
+	Provided by Web Browser Environment
+		alert.print(“hello world”)
+
+sandbox = security box
+	Interacts with Operating System
+
+Javascript = Sandlocked
+	Cannot go into OS
+	Safe (does not mess with users computer)
+	Limits capibilities
+
+------------------------------------------------------
+2009
+Ryan Dahl
+Node.js
+
+Browser:
+	V8 engine (translator) = Open Source
+	Replace Javascript API’s with NODE.JS API’s
+
+Node.js = Environment
+	Not a language
+	.js = language (javascript)
+	
+	Environment where Web API replaced with Node.js
+
+Modules covered:
+
+OS = operating system commands/operations
+Process = Puts things outside of js into js
+
+const process = require(“process”)

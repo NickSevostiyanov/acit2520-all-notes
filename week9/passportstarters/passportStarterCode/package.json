@@ -1,0 +1,22 @@
+{
+  "name": "passportdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-layouts": "^1.0.0",
+    "express-session": "^1.17.1",
+    "nodemon": "^3.1.9",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  }
+}

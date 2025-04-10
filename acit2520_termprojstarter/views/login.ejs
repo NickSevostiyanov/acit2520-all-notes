@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css"
+    />
+    <link href="/css/style.css" rel="stylesheet" />
+    <title>Login</title>
+  </head>
+  <body>
+    <main>
+      <div class="box">
+        <h1>Login</h1>
+        <% if (devMode) { %>
+        <p style="color: rgb(165, 36, 36)">
+          🤖 You are currently running in Dev mode. To make your life easier, we
+          autofill the username and password for you since sessions are wiped by
+          default whenever you save. Make sure to turn dev mode
+          <strong>OFF</strong>
+          before deploying to production by changing the .env file variable from
+          dev to prod. 🤖
+        </p>
+        <% } %>
+
+        <form action="/auth/login" method="post">
+          <input
+            type="text"
+            name="uname"
+            id="uname"
+            placeholder="Username"
+            value="<%= devMode ? 'alice123': '' %>"
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+            value="<%= devMode ? 'alice123!': '' %>"
+          />
+
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<h1 class="mt-4">Admin Dashboard</h1>
+<p class="lead mb-3">Welcome <%= user.name %></p>
+<a href="/auth/logout" class="btn btn-secondary">Logout</a>
+
+<hr />
+
+<h2 class="mt-4">Current Active Sessions</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Session ID</th>
+      <th>User ID</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% sessions.forEach(session => { %>
+      <tr>
+        <td><%= session.sessionId %></td>
+        <td><%= session.userId %></td>
+        <td>
+          <form action="/admin/revoke" method="POST">
+            <input type="hidden" name="sessionId" value="<%= session.sessionId %>" />
+            <button type="submit" class="btn btn-danger btn-sm">Revoke Session</button>
+          </form>
+        </td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>

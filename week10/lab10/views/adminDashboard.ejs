@@ -1,0 +1,23 @@
+<h1>Admin Dashboard</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>Session ID</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% sessions.forEach(session => { %>
+      <tr>
+        <td><%= session.userId %></td>
+        <td><%= session.sessionId %></td>
+        <td>
+          <form action="/session/<%= session.sessionId %>/destroy" method="POST">
+            <button type="submit" class="btn btn-danger">Revoke</button>
+          </form>
+        </td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>

@@ -1,0 +1,11 @@
+* Lunch Items *
+$17.26 bento box b - sashimi, box combo
+$15.46 bento box a - chicken teriyaki, box combo
+
+* Dinner Items *
+$6.30 vegetable sushi, 6 rolls
+$8.10 tuna roll, 3 rolls
+$7.11 roe, 2 rolls
+
+* Dessert Items *
+$14.40 cheesecake, 1 slice
